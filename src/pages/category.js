@@ -1,5 +1,6 @@
 import React from 'react'
 import useWordpress from '../hooks/useWordpress'
+import { Link } from 'gatsby'
 
 const Categories = () => {
   const { categories } = useWordpress()
@@ -7,7 +8,8 @@ const Categories = () => {
     <div>
       {categories.nodes.map(node => {
         return <div key={node.id}>
-          {node.name}
+          <Link to={node.uri}>{node.name}</Link>
+
         </div>
       })}
     </div>
@@ -22,6 +24,7 @@ export const query = graphql`
       nodes {
         name
         id
+        uri
       }
     }
   }

@@ -12,6 +12,12 @@ exports.createPages = ({ graphql, actions }) => {
             content
           }
         }
+        categories {
+          nodes {
+            name
+            uri
+          }
+        }
       }
     }
   `).then(result => {
@@ -25,6 +31,16 @@ exports.createPages = ({ graphql, actions }) => {
           slug,
           content,
         },
+      })
+    })
+    result.data.wordpress.categories.nodes.forEach(({ uri, name }) => {
+      createPage({
+        path: uri,
+        component: path.resolve(`./src/templates/category.js`),
+        context: {
+          uri,
+          name
+        }
       })
     })
   })

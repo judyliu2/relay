@@ -19,8 +19,8 @@ const MobileNav = () => {
             title={"How To Help"}
           />
           <NavItem
-            selected={pathname.startsWith("/categories")}
-            to={"/categories"}
+            selected={pathname.startsWith("/category")}
+            to={"/category"}
             title={"Categories"}
           />
         </NavItems>
