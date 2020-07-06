@@ -1,15 +1,13 @@
 import React from "react"
-import Layout from "../components/Layout"
-import PageContextProvider from "../context/PageContext"
+import useDevice from "../hooks/useDevice"
 
-const index = props => {
+const Index = props => {
+  console.log('props', props)
+  const device = useDevice()
+  console.log('device', device)
   return (
-    <PageContextProvider {...props}>
-      <Layout>
-        <h1>Home</h1>
-      </Layout>
-    </PageContextProvider>
+    <h1>Home</h1>
   )
 }
 
-export default index
+export default Index

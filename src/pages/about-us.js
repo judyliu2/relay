@@ -5,11 +5,7 @@ import PageContextProvider from "../context/PageContext"
 
 const AboutUs = props => {
   return (
-    <PageContextProvider {...props}>
-      <Layout>
-        <h1>About us</h1>
-      </Layout>
-    </PageContextProvider>
+    <h1>About us</h1>
   )
 }
 

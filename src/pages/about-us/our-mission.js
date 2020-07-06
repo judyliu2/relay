@@ -4,11 +4,9 @@ import PageContextProvider from "../../context/PageContext"
 
 const OurMission = props => {
   return (
-    <PageContextProvider {...props}>
-      <Layout>
-        <h1>Our mission</h1>
-      </Layout>
-    </PageContextProvider>
+
+    <h1>Our mission</h1>
+
   )
 }
 
