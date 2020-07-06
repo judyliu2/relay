@@ -1,13 +1,34 @@
 import React from "react"
-import useDevice from "../hooks/useDevice"
+import { Link } from "gatsby"
 
 const Index = props => {
-  console.log('props', props)
-  const device = useDevice()
-  console.log('device', device)
+  const posts = props.data.wordpress.posts.nodes
+
   return (
-    <h1>Home</h1>
+    <ul>
+      {posts.map(post => {
+        return (
+          <li key={post.id}>
+            <Link to={`/${post.slug}`}>{post.title}</Link>
+          </li>
+        )
+      })}
+    </ul>
   )
 }
 
 export default Index
+export const query = graphql`
+  {
+    wordpress {
+      posts {
+        nodes {
+          title
+          id
+          slug
+        }
+      }
+    }
+  }
+`
+

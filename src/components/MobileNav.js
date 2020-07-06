@@ -14,14 +14,14 @@ const MobileNav = () => {
         <NavItems>
           <NavItem selected={pathname === "/"} to={"/"} title={"Relay"} />
           <NavItem
-            selected={pathname.startsWith("/tips-and-advice")}
-            to={"/tips-and-advice"}
-            title={"Tips and Advice"}
-          />
-          <NavItem
             selected={pathname.startsWith("/how-to-help")}
             to={"/how-to-help"}
-            title={"How to Help"}
+            title={"How To Help"}
+          />
+          <NavItem
+            selected={pathname.startsWith("/categories")}
+            to={"/categories"}
+            title={"Categories"}
           />
         </NavItems>
       </NavBar>

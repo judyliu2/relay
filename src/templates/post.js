@@ -7,7 +7,7 @@ const post = props => {
   return (
     <>
       <h1>{title}</h1>
-      <section>{content}</section>
+      {/* <section>{content}</section> */}
       {/* <div dangerouslySetInnerHTML={{ __html: content }}></div> */}
     </>
   )
