@@ -5,9 +5,9 @@ import useNavigator from "./useNavigator"
 const getType = () => {
   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     return 'MOBILE'
+  } else {
+    return 'DESKTOP'
   }
-  console.warn('Non mobile device type not set up src/hooks/useDevice.js')
-  return 'NOT MOBILE, TO-DO - src/hooks/useDevice.js'
 }
 
 const getBreakpoint = (windowSize) => {

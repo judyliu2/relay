@@ -13,7 +13,17 @@ const Header = () => {
     <>
       <NavBar>
         <NavItems>
-          <NavItem selected={pathname === "/"} to={"/"} title={"Home"} />
+          <NavItem selected={pathname === "/"} to={"/"} title={"Relay"} />
+          <NavItem
+            selected={pathname.startsWith("/categories")}
+            to={"/categories"}
+            title={"Categories"}
+          />
+          <NavItem
+            selected={pathname.startsWith("/how-to-help")}
+            to={"/how-to-help"}
+            title={"How to Help"}
+          />
           <NavDropDown
             selected={pathname.startsWith("/about-us")}
             to={"/about-us"}
@@ -30,16 +40,6 @@ const Header = () => {
               title={"Our Team"}
             />
           </NavDropDown>
-          <NavItem
-            selected={pathname.startsWith("/tips-and-advice")}
-            to={"/tips-and-advice"}
-            title={"Tips and Advice"}
-          />
-          <NavItem
-            selected={pathname.startsWith("/how-to-help")}
-            to={"/how-to-help"}
-            title={"How to Help"}
-          />
         </NavItems>
       </NavBar>
     </>
