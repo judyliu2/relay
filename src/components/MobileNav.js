@@ -1,17 +1,15 @@
 import React, { useEffect } from "react"
-import { Link } from "gatsby"
 import NavBar from "./Nav/NavBar"
 import NavItem from "./Nav/NavItem"
 import NavItems from "./Nav/NavItems"
+import classes from './MobileNav.module.css'
 
 import useLocation from "../hooks/useLocation"
-import NavDropDown from "./Nav/NavDropDown"
-import useDevice from "../hooks/useDevice"
 
 const MobileNav = () => {
   const { pathname } = useLocation()
   return (
-    <>
+    <div className={classes.root}>
       <NavBar>
         <NavItems>
           <NavItem selected={pathname === "/"} to={"/"} title={"Relay"} />
@@ -27,7 +25,7 @@ const MobileNav = () => {
           />
         </NavItems>
       </NavBar>
-    </>
+    </div>
   )
 }
 

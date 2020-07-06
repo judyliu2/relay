@@ -12,13 +12,13 @@ const getType = () => {
 
 const getBreakpoint = (windowSize) => {
   console.warn('breakpoint not set up')
-  return 'md'
+  return 'unset'
 }
 
 const useDevice = () => {
   const windowSize = useWindowSize()
   const navigator = useNavigator()
-  const [device, setDevice] = useState({ type: null, breakpoint: null })
+  const [device, setDevice] = useState({ type: 'MOBILE', breakpoint: 'unset' })
   useEffect(() => {
     const type = getType(navigator.userAgent)
     const breakpoint = getBreakpoint(windowSize)

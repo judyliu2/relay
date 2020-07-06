@@ -1,0 +1,10 @@
+.root {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  background: #333333;
+  color: #eeeeee;
+}
+.rootOffset {
+  width: 100%;
+}
